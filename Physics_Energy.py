@@ -37,7 +37,7 @@ e_Gunpowder = 3.0
 
 
 
-print("what do you want to calculate")
+print("What do you want to calculate")
 print("Press 1 to calculate the nuclear energy")
 print("2: for the kinetic energy")
 print("3: for the energy form gravity")
