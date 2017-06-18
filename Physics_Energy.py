@@ -24,7 +24,7 @@ e_Jet_a = 43.3
 e_Jet_b = 43.5
 e_Kerosene = 46.3
 #Foods:
-e_Carbonhydrates = 17.2
+e_Carbohydrates = 17.2
 e_Fats = 38.9
 e_Proteins = 17.2
 #Explosives:
@@ -50,7 +50,7 @@ print("6: for the chemical energy")
 choice = input ("Choose the formula you need and fill in its corresponding number")
 
 if choice == 1:
-	m = input ("Fill in the mass in kilogram:")
+	m = input ("Fill in the mass in kilograms:")
 	c = 299792458
 	E = m * c ** 2
 	re = 1
@@ -100,7 +100,7 @@ elif choice == 6:
 
 #Room for more formulae
 else:
-	print("Congrats, you have chrashed the program;")
+	print("Congrats, you have crashed the program;")
 	print("You should have filled in a number between one and six.") #Change if more formulae are added
 	print("Bloody hell, it isn't that hard, is it?")
 	re = 0
