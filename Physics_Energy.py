@@ -32,7 +32,36 @@ e_ANFO = 6.3
 e_C4 = 6.3
 e_Dynamite = 7.5
 e_Gunpowder = 3.0
+e_Nitroglycerine = 6.4
+e_PETN = 5.8
+e_Silver_nitride = 0.9
+e_Torpex = 7.0
+e_TNT = 4.7
 
+#Energy density of some fuels:
+#Biomass:
+u_Alfalfa = 18.4
+u_Charcoal = 29.0
+u_Coconut_husks = 9.8
+u_Coconut_shells = 17.9
+u_Coffee_husks = 16.0
+u_Cotton_husks = 16.0
+u_Cotton_hulls = 19.4
+u_Cotton_stalks = 17.4
+u_Dung = 12.0
+u_Groundnut_shells = 19.7
+u_Maize_cobs = 18.9
+u_Maize_stalks = 18.2
+u_Peat = 14.6
+u_Rice_hulls = 15.5
+u_Rice_straw = 15.2
+u_Sugar_cane_bagasse = 19.0
+u_Sorghum_bagasse = 18.9
+u_Soybean_stalks = 19.4
+u_Wheat_straws = 18.9
+u_Wood_green = 10.9
+u_Wood_air_dry = 15.5
+u_Wood_oven_dry = 20.0
 
 
 
@@ -93,9 +122,18 @@ elif choice == 5:
 	re = 2
 
 elif choice == 6:
-	e = input ("Fill in the specific energy of the fuel in mega joules per kilogram:")
-	m = input ("Fill in the mass of the fuel in kilograms:")
-	E = e * m 
+	se = 0
+	ed = 1
+	sub_choice_fuels = input ("Fill in ed for the energy density and se for the specific energy")
+	if sub_choice_fuels == se:
+		e = input ("Fill in the specific energy of the fuel in mega joules per kilogram:")
+		m = input ("Fill in the mass of the fuel in kilograms:")
+		E = e * m 
+		re = 1
+	elif sub_choice_fuels == ed:
+		u = input ("Fill in the energy density of the fuel in mega joules per kilogram:")
+		V = input ("Fill in the volume of the fuel in litres:")
+		E = u * V
 	re = 1
 
 #Room for more formulae
@@ -107,6 +145,7 @@ else:
 
 if re == 1:
 	print (E)
+
 elif re == 2:
 	print (P)
 	dt = input ("Fill in the change of time during the proces:")
